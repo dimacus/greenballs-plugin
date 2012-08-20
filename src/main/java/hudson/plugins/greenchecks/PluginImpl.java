@@ -1,4 +1,4 @@
-package hudson.plugins.greenballs;
+package hudson.plugins.greenchecks;
 
 import hudson.Plugin;
 import hudson.PluginWrapper;
@@ -31,7 +31,7 @@ public class PluginImpl extends Plugin {
 
   transient PluginWrapper wrapper;
 
-  transient final Logger logger = Logger.getLogger("hudson.plugins.greenballs");
+  transient final Logger logger = Logger.getLogger("hudson.plugins.greenchecks");
 
   @Override
   public void start() throws Exception {

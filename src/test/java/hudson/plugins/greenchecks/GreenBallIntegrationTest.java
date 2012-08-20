@@ -1,4 +1,4 @@
-package hudson.plugins.greenballs;
+package hudson.plugins.greenchecks;
 
 import java.math.BigInteger;
 import java.net.URL;

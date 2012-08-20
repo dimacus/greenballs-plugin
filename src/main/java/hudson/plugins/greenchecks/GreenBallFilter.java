@@ -1,4 +1,4 @@
-package hudson.plugins.greenballs;
+package hudson.plugins.greenchecks;
 
 import hudson.model.Hudson;
 import hudson.model.User;
@@ -33,7 +33,7 @@ public class GreenBallFilter implements Filter {
 
   final Pattern patternYellow = Pattern.compile(String.format(patternStr, "yellow"));
 
-  final Logger logger = Logger.getLogger("hudson.plugins.greenballs");
+  final Logger logger = Logger.getLogger("hudson.plugins.greenchecks");
 
   public void init(FilterConfig config) throws ServletException {
   }
@@ -65,18 +65,18 @@ public class GreenBallFilter implements Filter {
       ColorBlindProperty colorBlindProperty = user.getProperty(ColorBlindProperty.class);
       if (colorBlindProperty != null && colorBlindProperty.isEnabledColorBlindSupport()) {
         if ((m = patternBlue.matcher(uri)).find()) {
-          return "/plugin/greenballs/colorblind/" + m.group(1) + "/green" + m.group(2) + ".gif";
+          return "/plugin/greenchecks/colorblind/" + m.group(1) + "/green" + m.group(2) + ".gif";
         } else if ((m = patternRed.matcher(uri)).find()) {
-          return "/plugin/greenballs/colorblind/" + m.group(1) + "/red" + m.group(2) + ".gif";
+          return "/plugin/greenchecks/colorblind/" + m.group(1) + "/red" + m.group(2) + ".gif";
         } else if ((m = patternYellow.matcher(uri)).find()) {
-          return "/plugin/greenballs/colorblind/" + m.group(1) + "/yellow" + m.group(2) + ".gif";
+          return "/plugin/greenchecks/colorblind/" + m.group(1) + "/yellow" + m.group(2) + ".gif";
         }
         return null;
       }
     }
 
     if ((m = patternBlue.matcher(uri)).find()) {
-      return "/plugin/greenballs/" + m.group(1) + "/green" + m.group(2) + "." + m.group(3);
+      return "/plugin/greenchecks/" + m.group(1) + "/green" + m.group(2) + "." + m.group(3);
     }
     return null;
   }

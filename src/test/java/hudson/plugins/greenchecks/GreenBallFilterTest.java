@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package hudson.plugins.greenballs;
+package hudson.plugins.greenchecks;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;

@@ -1,4 +1,4 @@
-package hudson.plugins.greenballs;
+package hudson.plugins.greenchecks;
 
 import hudson.model.UserProperty;
 import hudson.model.User;
